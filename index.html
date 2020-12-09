@@ -32,7 +32,7 @@
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                         <a class="nav-link" href="#">Features</a>
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Login</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Login</a>
                     </div>
                 </div>
             </div>
@@ -52,31 +52,63 @@
         crossorigin="anonymous"></script>
 </body>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Conectar na sua conta farareh</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form>
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label for="recipient-name" class="col-form-label">Login:</label>
+            <input type="email" class="form-control" placeholder="email@exemplo.com" id="recipient-name">
           </div>
           <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <label for="password-text" class="col-form-label">Senha:</label>
+            <input type="text" class="form-control" id="password-text">
           </div>
+          <button type="button" class="btn btn-secondary" id="sub-btn" data-bs-toggle="modal" data-bs-target="#cadastroModal">Inscrever-se</button>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Entrar</button>
       </div>
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Criar um conta farareh</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Nome:</label>
+                <input type="text" class="form-control" placeholder="Nome e Sobrenome" id="recipient-name">
+              </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Email:</label>
+              <input type="email" class="form-control" placeholder="email@exemplo.com" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="password-text" class="col-form-label">Senha:</label>
+              <input type="text" class="form-control" id="password-text">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Criar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </html>
