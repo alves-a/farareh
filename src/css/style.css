@@ -2,7 +2,6 @@ body {
     background: #121212;
 }
 
-.container {
-    width: 940px;
-    margin: 0 auto;
+.card-opcao {
+    max-width: 18rem;
 }
