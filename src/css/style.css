@@ -1,9 +1,37 @@
+:root {
+    --azul: #0D8BD9;
+    --verde: #54BF50;
+    --amarelo: #F2C335;
+    --laranja: #F28627;
+    --vermelho: #D92818;
+}
+
 body {
     background: #121212;
 }
 
 .titulo-principal {
     font-family: 'Fredoka One', cursive;
+}
+
+.img-carrossel-legenda {
+    font-family: 'Fredoka One', cursive;
+    color: var(--verde);
+    text-shadow: 0 0 3px #000;
+}
+
+.img-carrossel-um {
+    object-fit: cover;
+    object-position: 50% 40%;
+    height: calc(100vh - 3.5rem);
+    filter: grayscale(20%);
+}
+
+.img-carrossel-dois {
+    object-fit: cover;
+    object-position: 80% 60%;
+    height: calc(100vh - 3.5rem);
+    filter: grayscale(70%);
 }
 
 .card-opcao {
