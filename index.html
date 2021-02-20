@@ -118,12 +118,10 @@
                             <label for="password-text" class="col-form-label">Senha:</label>
                             <input type="text" class="form-control" id="password-text">
                         </div>
-                        <button type="button" class="btn btn-secondary" id="sub-btn" data-bs-toggle="modal"
-                            data-bs-target="#cadastroModal">Inscrever-se</button>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-outline-secondary" id="sub-btn" data-bs-toggle="modal" data-bs-target="#cadastroModal">Cadastrar-se</button>
                     <button type="button" class="btn btn-primary" id="btn-logar">Entrar</button>
                 </div>
             </div>
@@ -131,42 +129,76 @@
     </div>
 
     <!-- modal cadastro -->
-    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Criar uma conta farareh</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Nome:</label>
-                            <input type="text" class="form-control" placeholder="Nome e Sobrenome" id="recipient-name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Email:</label>
-                            <input type="email" class="form-control" placeholder="email@exemplo.com"
-                                id="recipient-name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="password-text" class="col-form-label">Senha:</label>
-                            <input type="text" class="form-control" id="password-text">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Criar</button>
-                </div>
+    <div class="modal" tabindex="-1" id="cadastroModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Novo cadastro</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+                <form action="">
+                    <fieldset>
+                        <legend>Informações básicas</legend>
+                        <div class="mb-3">
+                            <label for="cadastro-nome" class="col-form-label">Nome:</label>
+                            <input type="text" class="form-control" id="cadastro-nome" placeholder="Digite aqui seu nome completo" required>
+                            <span class="input-mensagem-erro"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cadastro-email" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="cadastro-email" placeholder="email@exemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cadastro-senha" class="col-form-label">Senha:</label>
+                            <input type="password" class="form-control" id="cadastro-senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+                            title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos." data-tipo="senha" required>
+                        </div>
+                    </fieldset>
+                    <hr>
+                    <fieldset>
+                        <legend>Informações pessoais</legend>
+                        <div class="mb-3">
+                            <label for="cadastro-data" class="col-form-label">Data de nascimento:</label>
+                            <input type="date" class="form-control" id="cadastro-data" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cadastro-cpf" class="col-form-label">CPF:</label>
+                            <input type="text" class="form-control" id="cadastro-cpf" required>
+                        </div>
+                    </fieldset>
+                    <hr>
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <div class="mb-3">
+                            <label for="cadastro-cep" class="col-form-label">CEP:</label>
+                            <input type="text" class="form-control" id="cadastro-cep" pattern="[\d]{5}-?[\d]{3}" data-tipo="cep" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cadastro-logradouro" class="col-form-label">Logradouro:</label>
+                            <input type="text" class="form-control" id="cadastro-logradouro">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cadastro-cidade" class="col-form-label">Cidade:</label>
+                            <input type="text" class="form-control" id="cadastro-cidade">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cadastro-estado" class="col-form-label">Estado:</label>
+                            <input type="text" class="form-control" id="cadastro-estado">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Cadastrar-se</button>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
     <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="./src/js/login.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
 </body>
 </html>
