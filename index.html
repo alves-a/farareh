@@ -142,16 +142,16 @@
                         <legend>Informações básicas</legend>
                         <div class="mb-3">
                             <label for="cadastro-nome" class="col-form-label">Nome:</label>
-                            <input type="text" class="form-control" id="cadastro-nome" placeholder="Digite aqui seu nome completo" required>
+                            <input type="text" class="form-control input" data-tipo="nome" id="cadastro-nome" placeholder="Digite aqui seu nome completo" required>
                             <span class="input-mensagem-erro"></span>
                         </div>
                         <div class="mb-3">
                             <label for="cadastro-email" class="col-form-label">Email:</label>
-                            <input type="email" class="form-control" id="cadastro-email" placeholder="email@exemplo.com" required>
+                            <input type="email" class="form-control input" data-tipo="email" id="cadastro-email" placeholder="email@exemplo.com" required>
                         </div>
                         <div class="mb-3">
                             <label for="cadastro-senha" class="col-form-label">Senha:</label>
-                            <input type="password" class="form-control" id="cadastro-senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
+                            <input type="password" class="form-control input" data-tipo="senha" id="cadastro-senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
                             title="A senha deve conter entre 6 a 12 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos." data-tipo="senha" required>
                         </div>
                     </fieldset>
@@ -160,11 +160,11 @@
                         <legend>Informações pessoais</legend>
                         <div class="mb-3">
                             <label for="cadastro-data" class="col-form-label">Data de nascimento:</label>
-                            <input type="date" class="form-control" id="cadastro-data" required>
+                            <input type="date" class="form-control input" data-tipo="data" id="cadastro-data" required>
                         </div>
                         <div class="mb-3">
                             <label for="cadastro-cpf" class="col-form-label">CPF:</label>
-                            <input type="text" class="form-control" id="cadastro-cpf" required>
+                            <input type="text" class="form-control input" data-tipo="cpf" id="cadastro-cpf" required>
                         </div>
                     </fieldset>
                     <hr>
@@ -172,19 +172,19 @@
                         <legend>Endereço</legend>
                         <div class="mb-3">
                             <label for="cadastro-cep" class="col-form-label">CEP:</label>
-                            <input type="text" class="form-control" id="cadastro-cep" pattern="[\d]{5}-?[\d]{3}" data-tipo="cep" required>
+                            <input type="text" class="form-control input" data-tipo="cep" id="cadastro-cep" pattern="[\d]{5}-?[\d]{3}" data-tipo="cep" required>
                         </div>
                         <div class="mb-3">
                             <label for="cadastro-logradouro" class="col-form-label">Logradouro:</label>
-                            <input type="text" class="form-control" id="cadastro-logradouro">
+                            <input type="text" class="form-control input" data-tipo="logradouro" id="cadastro-logradouro">
                         </div>
                         <div class="mb-3">
                             <label for="cadastro-cidade" class="col-form-label">Cidade:</label>
-                            <input type="text" class="form-control" id="cadastro-cidade">
+                            <input type="text" class="form-control input" data-tipo="cidade" id="cadastro-cidade">
                         </div>
                         <div class="mb-3">
                             <label for="cadastro-estado" class="col-form-label">Estado:</label>
-                            <input type="text" class="form-control" id="cadastro-estado">
+                            <input type="text" class="form-control input" data-tipo="estado" id="cadastro-estado">
                         </div>
                     </fieldset>
                 </form>
@@ -200,5 +200,6 @@
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="./src/js/login.js"></script>
+    <script src="./src/js/app.js" type="module"></script>
 </body>
 </html>
