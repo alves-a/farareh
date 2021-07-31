@@ -25,7 +25,7 @@ $sql = <<<SQL
   SQL;
 
   try{
-    
+
     $id_pessoafisica = $pdo->lastInsertId();
       
     $stmt = $pdo->prepare($sql);
@@ -37,7 +37,6 @@ $sql = <<<SQL
     $pdo->commit();
   }
   catch (Exception $e) {
-    $pdo->rollBack();
     if ($e->errorInfo[1] === 1062)
       exit('Dados duplicados: ' . $e->getMessage());
     else
