@@ -26,8 +26,6 @@ $sql = <<<SQL
 
   try{
     
-    $pdo -> beginTransaction();
-
     $id_pessoafisica = $pdo->lastInsertId();
       
     $stmt = $pdo->prepare($sql);
